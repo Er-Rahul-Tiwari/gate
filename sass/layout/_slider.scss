@@ -1,0 +1,86 @@
+.slider {
+  grid-column: full-start / full-end;
+
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  transition: transform 1s;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: start;
+  align-items: center;
+
+  padding: 0 0 0 12rem;
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: 1fr max-content;
+    height: calc(100vh - 6rem);
+    padding: 0 1.5rem;
+  }
+
+  &__product,
+  &__solution {
+    display: grid;
+    grid-template-rows: repeat(2, min-content) minmax(6rem, max-content);
+    grid-template-columns: minmax(min-content, max-content);
+    grid-gap: 1rem;
+  }
+  &__btn {
+    padding: 1.5rem 4rem;
+    display: grid;
+    justify-self: start;
+
+    background-color: $color-black;
+    color: $color-white;
+    font-weight: 700;
+  }
+}
+
+.arrow__left {
+  position: absolute;
+  left: 2rem;
+  top: calc(50vh - 5rem);
+  z-index: 9990;
+}
+.arrow__right {
+  position: absolute;
+  right: 2rem;
+  top: calc(50vh - 5rem);
+  z-index: 9990;
+}
+@media only screen and (max-width: $bp-large) {
+  .arrow__left,
+  .arrow__right {
+    top: calc(100vh - 20vh);
+  }
+}
+.arrow__circle {
+  border: 2px solid $color-7;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  z-index: 9999;
+
+  &:hover {
+    border: 2px solid $color-black;
+    cursor: pointer;
+  }
+}
+.arrow__arr {
+  z-index: 9999;
+
+  width: 2rem;
+  fill: none;
+  stroke: $color-black;
+  stroke-width: 2px;
+}

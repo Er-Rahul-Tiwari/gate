@@ -1,0 +1,36 @@
+.cards {
+  display: grid;
+  @include grid(25rem);
+  grid-gap: 7rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all .3s;
+
+  &__img{
+      width: 100%;
+      grid-row: 1/2;
+      grid-column: 1/-1;
+  }
+  &__heading{
+      grid-row: 2/3;
+      grid-column: 1/-1;
+
+      font-weight: 700;
+      font-size: $font--18;
+      margin : 2rem 1rem 3rem 2rem;
+      text-transform: capitalize;
+      color: $color-7;
+  }
+
+  &:hover{
+    box-shadow: 0 0 2rem rgba($color-black,.15);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,110 @@
+.rfid{
+
+    &__picture{
+        grid-column: full-start / col-end 4;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        align-items: center;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+        object-fit: cover;
+        z-index: 1;
+        background-color: $color-fb;
+
+        @media only screen and (max-width: $bp-large){
+            grid-column: full-start/ full-end;
+            grid-column: 1/-1;
+            margin:0;
+        }
+    }
+    &__img--1{
+        width: 100%;
+        grid-row: 1 / -1;
+        grid-column: 1 / 5;
+        height: auto;
+        z-index: 2;
+        
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 2 / 6;
+        }
+    }
+    &__selfy{
+        width: 100%;
+        grid-row: 1 / -1;
+        grid-column: 2 / 5;
+        height: auto;
+        z-index: 2;
+        
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 2 / 6;
+        }
+    }
+    &__content{
+        grid-column: col-start 5 / full-end;
+        padding: 3rem 1rem;
+        display: grid;
+        align-content: center;
+        justify-items: start;
+        background-color: $color-fb;
+
+        @media only screen and (max-width: $bp-large){
+            grid-column: full-start/ full-end;
+            margin: 0;
+            padding: 2rem;
+        }
+
+    }
+}
+
+.attendance{
+    &__picture{
+        background-color: $color-f2;
+        grid-column: col-start 5 / full-end;
+        // margin: 7rem 0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        align-items: center;
+        
+        @media only screen and (max-width: $bp-large){
+            grid-column: full-start/ full-end;
+        }
+    }
+    &__img--1{
+        width: 100%;
+        grid-row: 1/6;
+        grid-column: 1/-1;
+
+        @media only screen and (max-width: $bp-large){
+            grid-column: full-start/ full-end;
+            grid-row: 1/ -1;
+            grid-column: 1/ -1;
+        }
+    }
+    &__content{
+        grid-column: full-start / col-end 4;
+        background-color: $color-f2;
+        padding: 3rem;
+        display: grid;
+        align-content: center;
+        justify-items: start;
+        // margin: 7rem 0;
+
+        @media only screen and (max-width: $bp-large){
+            grid-column: full-start/ full-end;
+            margin: 0;
+            padding: 2rem;
+        }
+    }
+}
+
+.pro{
+    grid-column: center-start / center-end;
+    margin: 2rem 0;
+
+    @media only screen and (max-width: $bp-large){
+        grid-column: full-start / full-end;
+        padding: 0 1.5rem;
+    }
+}

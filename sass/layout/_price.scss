@@ -1,0 +1,38 @@
+.price{
+
+&__card{
+    grid-column: center-start / col-end 3;
+    
+
+    box-shadow: 0 0 2rem rgba($color-black,.1);
+    padding: 5rem 3rem;
+    margin: 5rem 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border: 2px solid rgba($color-blue,.3);
+
+    &__border{
+        width: 100%;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid $color-e;
+        display: grid;
+        justify-items: center;
+        grid-row-gap: 1rem;
+    }
+}
+
+    &__form{
+        grid-column: col-start 6 / center-end;
+
+        
+
+    background-color: $color-f9;
+    padding: 5rem 3rem;
+    margin: 5rem 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    }
+}

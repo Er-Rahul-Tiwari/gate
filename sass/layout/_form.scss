@@ -1,0 +1,46 @@
+.form{
+    grid-column: col-start 2/ col-end 5;
+
+    background-color: $color-f9;
+    padding: 5rem 8rem;
+    margin: 7rem 0;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    @media only screen and (max-width: $bp-large){
+        grid-column: full-start / full-end;
+        padding: 0 1.5rem;
+        
+    }
+
+    &__group{
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    margin-bottom: 2rem;
+    }
+    &__input{
+        padding: 1rem 0;
+        width: 100%;
+        outline:none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid $color-a;
+        background-color: transparent;
+    }
+&__items{
+    
+    display: grid;
+    justify-items: end;
+}
+    &__btn{
+    padding: .5rem 2rem;
+    background-color: $color-a;
+    color: $color-white;
+    font-weight: 700;
+
+    &:hover{
+        background-color: $color-black;
+    }
+    }
+}

@@ -1,0 +1,47 @@
+.footer {
+  grid-column: full-start/full-end;
+  padding: 5rem 4rem 5rem 7rem;
+
+  color: $color-7;
+  background-color: $color-f9;
+
+  border-top: 2px solid $color-d;
+
+  @media only screen and (max-width: $bp-large){
+    padding: 2rem 1.5rem;
+  }
+  &__logo{
+    width: 30rem;
+    object-fit: cover;
+    margin-top: 5rem;
+    @media only screen and (max-width: $bp-large){
+      width: 20rem;
+      margin-bottom: 3rem;
+    }
+  }
+  &__name{
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: -1px;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+  }
+  &__list{
+    display: grid;
+    justify-content: start;
+    grid-gap: 1.5rem;
+    align-content: start;
+
+  }
+  &__link{
+    font-size: $font--16;
+    color: $color-7;
+
+    &:hover{
+      color: $color-black;
+    }
+  }
+}
